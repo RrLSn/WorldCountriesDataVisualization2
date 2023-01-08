@@ -2256,3 +2256,10 @@ const countries_data = [
     area: 390757,
   },
 ];
+
+// selector
+const startLetter = document.querySelector('.btn1')
+const searchWord = document.querySelector('.btn2')
+const arrowSearch = document.querySelector('.btn3')
+const searchInput = document.querySelector('input')
+const mainContent = document.querySelector('.main')

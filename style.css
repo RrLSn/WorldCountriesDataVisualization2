@@ -13,7 +13,7 @@ body{
 
 .header{
     width: 100%;
-    height: 60%;
+    height: 50%;
     background: url('./media/globe-2.jpg') #364258;
     background-blend-mode: soft-light;
     background-size: 100% 100%;
