@@ -2263,3 +2263,23 @@ const searchWord = document.querySelector('.btn2')
 const arrowSearch = document.querySelector('.btn3')
 const searchInput = document.querySelector('input')
 const mainContent = document.querySelector('.main')
+const PEl = document.querySelector('p')
+const h3El = document.querySelector('h3')
+
+h3El.textContent = `Total Number of countries: ${countries_data.length}`
+
+let countries = []
+countries_data.filter((country) => countries.push(country.name.toUpperCase()))
+
+// EventListener
+startLetter.addEventListener(
+  'click',
+  (e) => {
+    for(let i=0; i < countries.length; i++){
+      let startWith = countries[i].startWith(searchInput.value)
+      // mainContent.innerHTML = `<div>${startWith}</div>`
+    }
+  }
+)
+
+

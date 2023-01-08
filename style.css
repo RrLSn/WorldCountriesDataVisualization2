@@ -13,7 +13,7 @@ body{
 
 .header{
     width: 100%;
-    height: 50%;
+    height: 55%;
     background: url('./media/globe-2.jpg') #364258;
     background-blend-mode: soft-light;
     background-size: 100% 100%;
@@ -29,6 +29,8 @@ body{
 .button{
     width: 24rem;
     margin: 1rem auto 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 .btn{
     border: none;
@@ -44,14 +46,19 @@ body{
 
 .btn1{
     width: 8rem;
+    height: 2.2rem;
 }
 
 .btn2{
     width: 12rem;
+    height: 2.2rem;
 }
 
 .btn3{
-    width: 2rem;
+    width: 3rem;
+    height: 2.2rem;
+    display: flex;
+    padding: 2px 3px;
 }
 
 input{
@@ -71,4 +78,13 @@ input::placeholder{
     text-align: center;
     font-size: 1rem;
     color: #c2c2c2;
+}
+
+.arrowDwn{
+    display: none;
+    height: 20px;
+}
+
+.arrowUp{
+    height: 20px;
 }
