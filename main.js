@@ -2262,9 +2262,11 @@ const startLetter = document.querySelector('.btn1')
 const searchWord = document.querySelector('.btn2')
 const arrowSearch = document.querySelector('.btn3')
 const searchInput = document.querySelector('input')
-const mainContent = document.querySelector('.main')
+const mainContent = document.querySelector('main')
 const PEl = document.querySelector('p')
 const h3El = document.querySelector('h3')
+const arrowUp = document.querySelector('.arrowUp')
+const arrowDown = document.querySelector('.arrowDwn')
 
 h3El.textContent = `Total Number of countries: ${countries_data.length}`
 
@@ -2275,11 +2277,48 @@ countries_data.filter((country) => countries.push(country.name.toUpperCase()))
 startLetter.addEventListener(
   'click',
   (e) => {
+    searchWord.style.background = '#895be6'
+    startLetter.style.background = '#5b1fb9'
+    mainContent.innerHTML = ''
+    let arr = []
     for(let i=0; i < countries.length; i++){
-      let startWith = countries[i].startWith(searchInput.value)
-      // mainContent.innerHTML = `<div>${startWith}</div>`
+      let startWith = countries[i].startsWith(searchInput.value.toUpperCase())
+      if(startWith && searchInput.value.length >= 1){
+        mainContent.innerHTML += `<div>${countries[i]}</div>`
+        arr.push(countries[i])
+      }
     }
+    PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
   }
 )
 
+
+searchWord.addEventListener(
+  'click',
+  (e) => {
+    startLetter.style.background = '#895be6'
+    searchWord.style.background = '#5b1fb9'
+    mainContent.innerHTML = ''
+    PEl.textContent = ''
+    arrowUp.style.display = 'none'
+    arrowDown.style.display = 'block'
+    let arr = []
+    for(let i=0; i < countries.length; i++){
+      let search = countries[i].includes(searchInput.value.toUpperCase())
+      if(search && searchInput.value.length >= 1){
+        mainContent.innerHTML += `<div>${countries[i]}</div>`
+        arr.push(countries[i])
+      }
+    }
+    PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
+  }
+)
+
+
+arrowSearch.addEventListener(
+  'click',
+  (e) => {
+    
+  }
+)
 

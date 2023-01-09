@@ -9,6 +9,7 @@ body{
     height: 100vh;
     background-color: #fefee4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 .header{
@@ -37,9 +38,11 @@ body{
     padding: 6px 2px;
     background: #895be6;
     color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
-.btn:hover{
+.btn:active{
     background: #5b1fb9;
     font-weight: 600;
 }
@@ -71,7 +74,8 @@ input{
 }
 
 input:focus{
-    outline: #638ddc;
+    outline: none !important;
+    border: 0.15rem solid #638ddc;
 }
 
 input::placeholder{
@@ -88,3 +92,29 @@ input::placeholder{
 .arrowUp{
     height: 20px;
 }
+
+main{
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 2rem;
+    width: 97%;
+    margin: auto;
+}
+
+main div{
+    width: 12rem;
+    height: 10rem;
+    padding: 0 2rem;
+    background: url('./media/map_image.jpg') #364258;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    background-blend-mode: soft-light;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
