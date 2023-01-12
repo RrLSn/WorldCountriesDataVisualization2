@@ -2287,8 +2287,11 @@ startLetter.addEventListener(
         mainContent.innerHTML += `<div>${countries[i]}</div>`
         arr.push(countries[i])
       }
+      PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
     }
-    PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
+    for(const a of arr){
+      mainContent.innerHTML += `<p class= "aTag">${a}</p>`
+    }
   }
 )
 
@@ -2309,8 +2312,11 @@ searchWord.addEventListener(
         mainContent.innerHTML += `<div>${countries[i]}</div>`
         arr.push(countries[i])
       }
+      PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
     }
-    PEl.textContent = `Countries containing ${searchInput.value} are ${arr.length}`
+    for(const a of arr){
+      mainContent.innerHTML += `<p class= "aTag">${a}</p>`
+    }
   }
 )
 
@@ -2318,7 +2324,13 @@ searchWord.addEventListener(
 arrowSearch.addEventListener(
   'click',
   (e) => {
-    
+    mainContent.textContent = ''
+    arrowDown.style.display = 'none'
+    arrowUp.style.display = 'block'
+    let arrReverse = arr.reverse()
+    for(const aReverse of arrReverse){
+      mainContent.innerHTML += `<p>${aReverse}</p>` 
+    }
   }
 )
 

@@ -6,7 +6,7 @@
 
 body{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: #fefee4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
@@ -85,21 +85,22 @@ input::placeholder{
 }
 
 .arrowDwn{
-    display: none;
     height: 20px;
 }
 
 .arrowUp{
     height: 20px;
+    display: none;
 }
 
 main{
-    padding: 3rem;
+    padding: 2rem 3rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem 2rem;
     width: 97%;
-    margin: auto;
+    height: max-content;
+    margin: 1rem auto;
 }
 
 main div{
@@ -118,3 +119,6 @@ main div{
     border-radius: 10px;
 }
 
+.atag{
+    display: none;
+}
